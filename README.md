@@ -2,10 +2,10 @@
 
 ## Inserting data
   * Data is inserted by two file `A.txt` and `B.txt`
-* A.txt contains 
-		 * row size of the matrix
-		* column size of the matrix
-		* values of the matrix
+* A.txt contains
+	 * row size of the matrix
+	* column size of the matrix
+	* values of the matrix
 * user can generate any amount of matrix using given `generate.m` matlab file by giving 
 		`generate(<A row>,<A column>,<B row size>,<B column size>)`
 
@@ -13,7 +13,7 @@
 	
   * Data will be written to `output.txt` on same folder
 * output.txt contains;
-    * row size of the final matrix
+	* row size of the final matrix
 	* column size of the final matrix
 	* values of the final matrix			
 
