@@ -1,4 +1,4 @@
-# Thread_Matrix_Multiply
+# Thread_Matrix_Multiply [![Build Status](https://travis-ci.org/namila007/Thread_Matrix_Multiply.svg?branch=master)](https://travis-ci.org/namila007/Thread_Matrix_Multiply) [![BCH compliance](https://bettercodehub.com/edge/badge/namila007/Thread_Matrix_Multiply?branch=master)](https://bettercodehub.com/)
 
 ## Inserting data
   * Data is inserted by two file `A.txt` and `B.txt`
