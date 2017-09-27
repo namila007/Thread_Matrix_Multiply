@@ -8,6 +8,14 @@ Inserting data;
 	~user can generate any amount of matrix using given generate.m matlab file by giving 
 			<A row>,<A column>,<B row size>,<B column size>
 
+Output Data:
+	
+	~Data will be written to 'output.txt' on same folder
+	~output.txt contains
+		>row size of the final matrix
+		>column size of the final matrix
+		>values of the final matrix			
+
 Results:
 
 	~Results of the testcases are given in the TESTCASE folder.
@@ -30,6 +38,6 @@ Results:
 		~expectedoutput was matched with generated  output values
 	~Testcase1:
 		~A(1000*1000)
-		~B(1000*10000)
+		~B(1000*1000)
 		~expectedoutput was closely matched with generated output values.last values of decimals are bit differents
 

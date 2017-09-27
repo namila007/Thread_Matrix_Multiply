@@ -27,8 +27,8 @@ public class Threading implements Runnable {
           for(int row=startvalA;row<endvalA;row++) {
             int interestedcol=0;
             for (int col = 0; col < B[0].length; col++) {
-                float[] rowMatrix = A[row];
-                float[] columnMatrix = getColumn(B,interestedcol++);
+                float[] rowMatrix = A[row];//creating row matrix
+                float[] columnMatrix = getColumn(B,interestedcol++);//creating column matrix
 
                 columnMultiply = new ColumnMultiply(rowMatrix, columnMatrix);
                     try {
@@ -46,7 +46,7 @@ public class Threading implements Runnable {
 
     private float[] getColumn(float[][]matrix,int row){
         float[]columnMatrix=new float[matrix.length];
-
+        //getting the column from 2d matrix
         for(int col=0;col<matrix.length;col++) {
             columnMatrix[col]=matrix[col][row];
         }

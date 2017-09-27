@@ -24,13 +24,13 @@ public class ControlMatrix  {
     public void executeThreads() throws NullPointerException{
         int i=0;
         int Alength=0;
-        Alength=A.length/threadcount;
-
+        Alength=A.length/threadcount;//size of the rows
 
 
         threads=new Thread[threadcount];
 
         for(i=0;i<threadcount-1;i++){
+            //starting objects
             threads[i]=new Thread(new Threading(A,B,finalmatrix,new int[]{i*Alength,(i+1)*Alength}));
         }
         threads[i]=new Thread(new Threading(A,B,finalmatrix,new int[]{i*Alength,A.length}));
