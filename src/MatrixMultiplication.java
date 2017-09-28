@@ -1,5 +1,6 @@
 import Core.ControlMatrix;
 import Core.MatrixData;
+import Core.Single_Thread;
 
 import java.io.*;
 import java.util.Arrays;
@@ -10,7 +11,7 @@ import java.util.Scanner;
  */
 public class MatrixMultiplication {
 
-    private static String WRITEFILE="output.txt",FILE_A="A.txt",FILE_B="B.txt";
+    private static String WRITEFILE="output.txt",FILE_A="A.txt",FILE_B="B.txt",WRITEFILESINGLE="singleoutput.txt";
 
 
     public static void main(String[] args) {
@@ -69,14 +70,25 @@ public class MatrixMultiplication {
 
             }
 
-            //calling and running
+            //calling and running Thread Multiply
+            double t1=System.nanoTime(); //starting timer for counting
             ControlMatrix controlMatrix = new ControlMatrix(threadcount,matrixDataA.getMatrix(), matrixDataB.getMatrix(), finalmatrix);
             controlMatrix.executeThreads();
-
+            double t2=System.nanoTime(); //stop timer
             //writing data
             BufferedWriter br=new BufferedWriter(new FileWriter(WRITEFILE));
             controlMatrix.writeMatrixData(br);
             br.close();
+            System.out.println("Time Elapsed for Threaded= "+((t2-t1)/1000000)+"ms");
+
+            //runnning single thread operation
+            BufferedWriter brs=new BufferedWriter(new FileWriter(WRITEFILESINGLE));
+            double ts1=System.nanoTime(); //starting timer for counting
+            Single_Thread single_thread=new Single_Thread(matrixDataA.getMatrix(), matrixDataB.getMatrix(), finalmatrix,brs);
+            double ts2=System.nanoTime(); //stop timer
+            brs.close();
+            System.out.println("Time Elapsed for Single Threaded= "+((ts2-ts1)/1000000)+"ms");
+
 
         }catch (IOException e){
             e.printStackTrace();
