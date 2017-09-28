@@ -5,6 +5,7 @@ Inserting data;
 		>row size of the matrix
 		>column size of the matrix
 		>values of the matrix
+	~Testcases can be copy from each folder and replace the A and B in root folder	
 	~user can generate any amount of matrix using given generate.m matlab file by giving 
 			<A row>,<A column>,<B row size>,<B column size>
 
@@ -20,24 +21,40 @@ Results:
 
 	~Results of the testcases are given in the TESTCASE folder.
 	~Expected Output(TestX_exp_output.txt) was generated and compared with the output(TestX_output.txt) given but the program.
+	
 	~Testcase1:
 		~A(100*10)
 		~B(10*100)
 		~expectedoutput was matched with generated output values
+			Time Elapsed for Threaded= 19.171ms
+			Time Elapsed for Single Threaded= 65.356ms
+	
 	~Testcase2:
 		~A(5*20)
 		~B(20*6)
 		~expectedoutput was matched with generated output values
+			Time Elapsed for Threaded= 10.131ms
+			Time Elapsed for Single Threaded= 2.686ms
+	
 	~Testcase3:
 		~A(150*1)
 		~B(1*150)
 		~expectedoutput was matched with generated output values
+			Time Elapsed for Threaded= 20.719ms
+			Time Elapsed for Single Threaded= 51.983ms
+	
 	~Testcase4:
 		~A(1*80)
 		~B(80*1)
 		~expectedoutput was matched with generated  output values
-	~Testcase1:
-		~A(1000*1000)
-		~B(1000*1000)
+			Time Elapsed for Threaded= 6.022ms
+			Time Elapsed for Single Threaded= 1.603ms
+			
+	~Testcase5:
+		~A(500*500)
+		~B(500*500)
 		~expectedoutput was closely matched with generated output values.last values of decimals are bit differents
+		~Time Elapse for:
+			Time Elapsed for Threaded= 694.328ms
+			Time Elapsed for Single Threaded= 1124.646ms
 
